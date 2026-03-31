@@ -1,3 +1,161 @@
-h1{
-    background-color: blue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+  background: #e91e63;
+  color: white;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.top-bar h2 {
+  padding-left: 20px;
+}
+.icons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.icons span {
+  margin-left: 10px;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.search-box {
+  margin-top: 15px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+/* SECTION */
+.section {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+
+}
+
+.section h3 {
+  margin-bottom: 10px;
+}
+
+/* DEAL CARDS */
+.scroll {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  gap: 10px;
+    border-radius: 20px;
+}
+.scroll img {
+  width: 200px;
+  height: 140px;
+  flex-shrink: 0;
+   border-radius: 5px;
+   gap: 10px;
+}
+.card {
+  min-width: 150px;
+  height: 100px;
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+
+/* GRID */
+.grid {
+  display: flex; /* Aligns items in a row */
+  gap: 12px; /* Space between boxes */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  padding-bottom: 10px; /* Space for the scrollbar */
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+}
+.grid::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome/Safari */
+}
+
+.item {
+  flex:row;
+  min-width: 80px; /* Fixed width for each box */
+  background-color: #fff;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Important: clips the image to the corners */
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Very light shadow */
+  border: 1px solid #f0f0f0; /* Subtle border like the app */
+  cursor: pointer;
+
+}
+
+.item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.item p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* PERKS */
+.perks {
+  margin: 15px;
+  background: white;
+  line-height: 30px;
+  border-radius: 15px;
+  box-shadow: #e91e63 0px 4px 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ font-weight: 100;
+}
+.perks img {
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+.pop{
+  margin: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    min-width: 130px;
+  }
 }
